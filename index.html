@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>infa.store — Brand lokal pilihan</title>
+<meta name="description" content="infa.store: kurasi brand fashion lokal Indonesia. Telepati, Calle, CHMB, Praedae dan lainnya.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar">Gratis ongkir se-Indonesia untuk pembelian di atas Rp500.000</div>
+<header>
+  <nav><a href="#koleksi">Koleksi</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a></nav>
+  <a class="logo" href="#">infa.store</a>
+  <button class="cartbtn" id="open" aria-label="Buka keranjang">Keranjang (<span id="n">0</span>)</button>
+</header>
+
+<section class="hero">
+  <h1>Brand lokal,<br>satu <i>toko.</i></h1>
+  <div class="row">
+    <p>Kurasi pakaian dan aksesori dari brand independen Indonesia. Dipilih satu per satu, dikirim ke seluruh nusantara.</p>
+    <a class="btn" href="#koleksi">Belanja koleksi</a>
+  </div>
+</section>
+
+<div class="brands" id="brands" role="group" aria-label="Filter brand"></div>
+<div class="cats" id="cats" role="group" aria-label="Filter kategori"></div>
+
+<section class="sec" id="koleksi">
+  <div class="head"><h2 id="judul">Semua produk</h2><div class="tools"><input id="q" type="search" placeholder="Cari produk" aria-label="Cari produk">
+  <select id="sort" aria-label="Urutkan"><option value="">Urutkan</option><option value="lo">Harga terendah</option><option value="hi">Harga tertinggi</option><option value="az">Nama A–Z</option></select>
+  <span id="jml"></span></div></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="sec about" id="tentang">
+  <h2>Dari studio kecil, untuk rak kamu.</h2>
+  <div>
+    <p>infa.store mengumpulkan brand lokal yang membuat pakaian dengan sudut pandang sendiri. Setiap rilis datang dalam jumlah terbatas.</p>
+    <p>Mau brand kamu masuk? Kirim profil dan lookbook ke halo@infa.store.</p>
+  </div>
+</section>
+
+<section class="news" id="kontak">
+  <h2>Info rilis terbaru</h2>
+  <form id="nf"><input type="email" required placeholder="Alamat email" aria-label="Email"><button class="btn">Berlangganan</button></form>
+  <p id="nmsg" style="margin-top:14px;color:var(--mute)" aria-live="polite"></p>
+</section>
+
+<footer><span>© 2026 infa.store</span><span>Instagram · TikTok · WhatsApp</span></footer>
+
+<div class="ck" id="pdov" hidden role="dialog" aria-modal="true" aria-label="Detail produk"><div class="ckbox" style="max-width:1100px">
+<div class="ckh"><span>infa.store</span><button id="pdx" aria-label="Tutup detail produk">✕</button></div><div id="pdmain"></div></div></div>
+<div class="ck" id="ckov" hidden role="dialog" aria-modal="true" aria-label="Checkout"><div class="ckbox">
+<div class="ckh"><span>Checkout</span><button id="ckx" aria-label="Tutup checkout">✕</button></div>
+<ol class="steps" id="steps"></ol>
+<div class="ckg"><div id="ckmain"></div><aside id="cksum"></aside></div></div></div>
+<div class="shade" id="shade"></div>
+<aside class="drawer" aria-label="Keranjang">
+  <div class="dh"><span>Keranjang</span><button id="close" aria-label="Tutup">✕</button></div>
+  <div class="items" id="items"></div>
+  <div class="df"><div class="tot"><span>Total</span><span id="tot">Rp0</span></div><button class="btn" id="co">Lanjut ke checkout</button></div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
